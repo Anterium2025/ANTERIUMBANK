@@ -119,6 +119,18 @@
             margin-right: 0;
         }
 
+        /* Стили кнопки "Подробнее" */
+        .more-button {
+            background-color: #333; /* Другой цвет для отличия */
+            color: #fff;
+            padding: 15px 30px; /* Увеличим размеры кнопки */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 20px; /* Увеличим размер шрифта */
+            display: inline-block;
+            margin-top: 20px;
+        }
+
         /* Стили подвала */
         footer {
             background-color: rgba(51, 51, 51, 0.9); /* Полупрозрачный черный фон */
@@ -158,44 +170,22 @@
             </nav>
         </div>
     </header>
-
-    <section id="hero">
-        <div class="container">
-            <h2>Ваш надежный партнер в мире финансов</h2>
-            <p>Мы предлагаем широкий спектр банковских услуг для частных и корпоративных клиентов.</p>
-            <a href="#" class="button">Узнать больше</a>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>Наши услуги</h2>
-            <div class="service">
-                <h3>Кредиты</h3>
-                <p>Выгодные кредитные программы для любых целей.</p>
-            </div>
-            <div class="service">
-                <h3>Депозиты</h3>
-                <p>Высокие процентные ставки и надежное хранение ваших сбережений.</p>
-            </div>
-            <div class="service">
-                <h3>Инвестиции</h3>
-                <p>Персональные инвестиционные решения для достижения ваших финансовых целей.</p>
-            </div>
-            <button onclick="showPhoneNumber()">Узнать телефон</button> <!--Кнопка-->
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Энтериум Банк. Все права защищены.</p>
-        </div>
-    </footer>
-
-    <script>
-        function showPhoneNumber() {
-            alert("Наш номер телефона: 9(999) 99-88-880");
-        }
-    </script>
-</body>
-</html>
+  <section id="services">
+    <div class="container">
+      <h2>Наши услуги</h2>
+      <div class="service">
+        <h3>Кредиты</h3>
+        <p>Выгодные кредитные программы для любых целей.</p>
+      </div>
+      <div class="service">
+        <h3>Депозиты</h3>
+        <p>Высокие процентные ставки и надежное хранение ваших сбережений.</p>
+      </div>
+      <div class="service">
+        <h3>Инвестиции</h3>
+        <p>Персональные инвестиционные решения для достижения ваших финансовых целей.</p>
+      </div>
+      <button onclick="showPhoneNumber()">Узнать телефон</button>
+      <a href="#" class="more-button">Подробнее о Энтериум Банке</a>
+    </div>
+  </section>
