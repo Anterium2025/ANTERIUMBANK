@@ -16,23 +16,16 @@
             background-color: #004d99;
             color: white;
             padding: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
 
         .container {
             width: 90%;
             margin: 0 auto;
             max-width: 1200px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
 
-        header img {
-            height: 50px;
-            margin-right: 20px;
+        h1, h2, h3 {
+            margin: 0;
         }
 
         nav ul {
@@ -109,6 +102,9 @@
         button:hover {
             background-color: #003366;
         }
+
+        .modal {
+            display: none;
             position: fixed;
             z-index: 1;
             left: 0;
@@ -119,8 +115,7 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .modal-content {
-            background-color: white;
+        .modal-content {            background-color: white;
             margin: 10% auto;
             padding: 20px;
             border: 1px solid #888;
@@ -165,8 +160,6 @@
 
 <header>
     <div class="container">
-        <!-- Логотип банка -->
-        <img src="https://vk.com/photo608827230_457240794" alt="Логотип Энтериум Банка">
         <h1>Энтериум Банк</h1>
         <nav>
             <ul>
@@ -234,5 +227,3 @@
 </script>
 </body>
 </html>
-        .modal {
-            display: none;
