@@ -10,12 +10,32 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         header {
             background-color: #004d99;
             color: white;
             padding: 20px 0;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
         }
 
         .container {
@@ -26,6 +46,7 @@
 
         h1, h2, h3 {
             margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         nav ul {
@@ -40,12 +61,18 @@
             color: white;
             text-decoration: none;
             font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
         }
 
         #hero {
             background-color: #e6f2ff;
             padding: 40px 0;
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
 
         #hero h2 {
@@ -68,16 +95,18 @@
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .button:hover {
             background-color: #003366;
+            transform: scale(1.1);
         }
 
         #services {
             padding: 40px 0;
             text-align: center;
-        }
+            animation: fadeIn 2s ease-in-out;        }
 
         #services h2 {
             font-size: 32px;
@@ -97,10 +126,12 @@
             border-radius: 5px;
             cursor: pointer;
             margin: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         button:hover {
             background-color: #003366;
+            transform: scale(1.1);
         }
 
         .modal {
@@ -113,9 +144,11 @@
             height: 100%;
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.5s ease-in-out;
         }
 
-        .modal-content {            background-color: white;
+        .modal-content {
+            background-color: white;
             margin: 10% auto;
             padding: 20px;
             border: 1px solid #888;
@@ -123,6 +156,16 @@
             max-width: 600px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: zoomIn 0.5s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
         }
 
         .close {
@@ -131,6 +174,7 @@
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
+            transition: color 0.3s ease;
         }
 
         .close:hover {
@@ -142,6 +186,7 @@
             color: white;
             text-align: center;
             padding: 20px 0;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         #disclaimer {
@@ -150,6 +195,7 @@
             text-align: center;
             font-size: 16px;
             color: #990000;
+            animation: fadeIn 1.5s ease-in-out;
         }
     </style>
 </head>
@@ -195,35 +241,13 @@
             <h3>Инвестиции</h3>
             <p>Персональные инвестиционные решения для достижения ваших финансовых целей.</p>
         </div>
-        <button onclick="showPhoneNumber()">Узнать телефон</button>
-        <button id="openModalBtn">Подробнее о Энтериум Банке</button>
     </div>
 </section>
-
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-        <p>Добро пожаловать в Энтериум Банк! Мы предлагаем широкий спектр банковских услуг, ориентированных на удовлетворение потребностей как частных, так и корпоративных клиентов. Наша команда профессионалов всегда готова помочь вам в выборе наиболее подходящих финансовых решений. Мы ценим ваше время и стремимся к предоставлению высококачественного сервиса. Свяжитесь с нами для получения дополнительной информации!</p>
-    </div>
-</div>
 
 <footer>
     <div class="container">
         <p>&copy; 2024 Энтериум Банк. Все права защищены.</p>
     </div>
 </footer>
-
-<script>
-    function showPhoneNumber() {
-        alert("Наш номер телефона: 9(999) 99-88-880");
-    }
-
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("openModalBtn");
-
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-</script>
 </body>
 </html>
