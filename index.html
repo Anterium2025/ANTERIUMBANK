@@ -5,59 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Энтериум Банк</title>
     <style>
+        /* === Основные стили === */
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; /* Используем простой шрифт */
             margin: 0;
             padding: 0;
+            box-sizing: border-box; /* Универсальный box-sizing для всех элементов */
+            animation: fadeIn 1s ease-in-out; /* Анимация плавного появления страницы */
         }
 
-        footer {
-            background-color: #004d99;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            animation: fadeIn 1.5s ease-in-out;
+        /* Анимация плавного появления страницы */
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Начальная прозрачность */
+            }
+            to {
+                opacity: 1; /* Полная видимость */
+            }
         }
 
-        #disclaimer {
-            background-color: #ffcccc;
-            padding: 10px;
-            text-align: center;
-            font-size: 16px;
-            color: #990000;
-            animation: fadeIn 1.5s ease-in-out;
+        /* === Шапка сайта === */
+        header {
+            background-color: #004d99; /* Синий фон */
+            color: white; /* Белый текст */
+            padding: 20px 0; /* Отступы сверху и снизу */
+            animation: slideDown 1s ease-in-out; /* Анимация плавного появления сверху */
+        }
+
+        /* Анимация шапки */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%); /* Шапка начинает за пределами экрана */
+            }
+            to {
+                transform: translateY(0); /* Шапка возвращается на место */
+            }
         }
 
         .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
+            width: 90%; /* Ширина контейнера */
+            margin: 0 auto; /* Центрируем */
+            max-width: 1200px; /* Максимальная ширина */
         }
 
+        /* === Заголовки === */
+        h1, h2, h3 {
+            margin: 0; /* Убираем отступы */
+            animation: fadeIn 1.5s ease-in-out; /* Плавное появление заголовков */
+        }
+
+        /* === Меню навигации === */
         nav ul {
-            list-style-type: none;
+            list-style: none; /* Убираем маркеры списка */
             padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
+            margin: 0;
+            display: flex; /* Горизонтальное расположение */
+            gap: 20px; /* Промежутки между элементами */
         }
 
         nav ul li a {
-            text-decoration: none;
-            color: #004d99;
+            color: white; /* Белый текст */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-size: 18px; /* Размер текста */
+            transition: color 0.3s ease; /* Плавный переход цвета */
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00; /* Золотой цвет при наведении */
+        }        /* === Герой-секция (главный блок) === */        #hero {
+            background-color: #e6f2ff; /* Светло-голубой фон */
+            padding: 40px 0; /* Отступы сверху и снизу */
+            text-align: center; /* Центрируем текст */
+            animation: fadeIn 2s ease-in-out; /* Плавное появление секции */
+        }
+
+        #hero h2 {
+            font-size: 36px; /* Крупный заголовок */
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+
+        #hero p {
+            font-size: 18px; /* Размер текста */
+            margin-bottom: 20px; /* Отступ снизу */
         }
 
         .button {
-            background-color: #004d99;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+            display: inline-block; /* Блоковая кнопка */
+            padding: 15px 30px; /* Отступы внутри кнопки */
+            font-size: 18px; /* Размер текста */
+            color: white; /* Белый текст */
+            background-color: #004d99; /* Синий фон */
+            border: none; /* Убираем границу */
+            border-radius: 5px; /* Закругленные углы */
+            cursor: pointer; /* Указатель при наведении */
+            text-decoration: none; /* Убираем подчеркивание */
+            transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход при наведении */
+        }
+
+        .button:hover {
+            background-color: #003366; /* Темно-синий цвет */
+            transform: scale(1.1); /* Увеличение кнопки */
+        }/* === Секция "Услуги" === */
+        #services {
+            padding: 40px 0; /* Отступы сверху и снизу */
+            text-align: center; /* Центрируем текст */
+            animation: fadeIn 2s ease-in-out; /* Плавное появление */
+        }#services h2 {
+            font-size: 32px; /* Размер заголовка */
+            margin-bottom: 20px; /* Отступ снизу */
         }
 
         .service {
-            margin-bottom: 20px;
+            margin: 20px 0; /* Отступы между услугами */
+        }
+
+        /* === Кнопки в секции услуг === */
+        button {
+            padding: 15px 30px; /* Отступы внутри кнопки */
+            font-size: 18px; /* Размер текста */
+            color: white; /* Белый текст */
+            background-color: #004d99; /* Синий фон */
+            border: none; /* Убираем границу */
+            border-radius: 5px; /* Закругленные углы */
+            cursor: pointer; /* Указатель при наведении */            margin: 10px; /* Отступы между кнопками */            transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход при наведении */
+        }
+
+        button:hover {
+            background-color: #003366; /* Темно-синий цвет */
+            transform: scale(1.1); /* Увеличение кнопки */
+        }
+
+        /* === Подвал === */
+        footer {
+            background-color: #004d99; /* Синий фон */
+            color: white; /* Белый текст */
+            text-align: center; /* Центрируем текст */
+            padding: 20px 0; /* Отступы сверху и снизу */
+            animation: fadeIn 1.5s ease-in-out; /* Плавное появление */
+        }
+
+        /* === Дисклеймер === */
+        #disclaimer {
+            background-color: #ffcccc; /* Красный фон */
+            padding: 10px; /* Отступы внутри */
+            text-align: center; /* Центрируем текст */
+            font-size: 16px; /* Размер текста */
+            color: #990000; /* Тёмно-красный текст */
+            animation: fadeIn 1.5s ease-in-out; /* Плавное появление */
+        }
+
+        /* === Контактная информация === */
+        #contact-info {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #contact-info a {
+            color: #004d99; /* Синий цвет для ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-weight: bold; /* Жирный шрифт */
+        }
+
+        #contact-info a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
         }
     </style>
 </head>
@@ -68,14 +178,12 @@
 
 <header>
     <div class="container">
-        <img src="https://yapx.ru/album/YnOEB" alt="Логотип Энтериум Банка" style="max-width: 150px;">
         <h1>Энтериум Банк</h1>
         <nav>
             <ul>
                 <li><a href="#">Главная</a></li>
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#">О нас</a></li>
-                <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
     </div>
@@ -83,8 +191,8 @@
 
 <section id="hero">
     <div class="container">
-        <h2>Ваш надежный партнер в мире финансов</h2>
-        <p>Мы предлагаем широкий спектр банковских услуг для частных и корпоративных клиентов.</p>
+        <h2>Добро пожаловать в Энтериум Банк!</h2>
+        <p>Надежный партнер в мире финансов.</p>
         <a href="#" class="button">Узнать больше</a>
     </div>
 </section>
@@ -93,28 +201,32 @@
     <div class="container">
         <h2>Наши услуги</h2>
         <div class="service">
-            <h3>Кредиты</h3>
-            <p>Выгодные кредитные программы для любых целей.</p>
+            <h3>Кредитование</h3>
+            <p>Выгодные условия кредитования для физических и юридических лиц.</p>
+            <button>Подробнее</button>
         </div>
         <div class="service">
             <h3>Депозиты</h3>
-            <p>Высокие процентные ставки и надежное хранение ваших сбережений.</p>
+            <p>Высокие процентные ставки по депозитам в рублях и валюте.</p>
+            <button>Подробнее</button>
         </div>
         <div class="service">
-            <h3>Инвестиции</h3>
-            <p>Персональные инвестиционные решения для достижения ваших финансовых целей.</p>
+            <h3>Онлайн-банкинг</h3>
+            <p>Удобный и безопасный доступ к вашим счетам в любое время.</p>
+            <button>Подробнее</button>
         </div>
     </div>
 </section>
 
 <footer>
     <div class="container">
-        <p>&copy; 2024 Энтериум Банк. Все права защищены.</p>
-        <p>
-            Наш менеджер: <a href="https://t.me/anteriumoff" style="color: white;">@anteriumoff</a><br>
-            Телеграмм канал: <a href="https://t.me/anteriumOfical" style="color: white;">anterioriumOfical</a>
-        </p>
+        &copy; 2024 Энтериум Банк. Все права защищены.
     </div>
 </footer>
+
+<div id="contact-info">
+    <p>Наш менеджер-зам детектора: <a href="https://t.me/anteriumoff">@anteriumoff</a></p>
+    <p>Ссылка на телеграмм канал: <a href="https://t.me/anteriumOfical">https://t.me/anteriumOfical</a></p>
+</div>
 </body>
 </html>
