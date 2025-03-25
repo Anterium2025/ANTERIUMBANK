@@ -9,176 +9,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        header {
-            background-color: #004d99;
-            color: white;
-            padding: 20px 0;
-            animation: slideDown 1s ease-in-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-
-        h1, h2, h3 {
-            margin: 0;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
-
-        #hero {
-            background-color: #e6f2ff;
-            padding: 40px 0;
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        #hero h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        #hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: #004d99;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #003366;
-            transform: scale(1.1);
-        }
-
-        #services {
-            padding: 40px 0;
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;        }
-
-        #services h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .service {
-            margin: 20px 0;
-        }
-
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: #004d99;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #003366;
-            transform: scale(1.1);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 90%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            animation: zoomIn 0.5s ease-in-out;
-        }
-
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.8);
-            }
-            to {
-                transform: scale(1);
-            }
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close:hover {
-            color: black;
         }
 
         footer {
@@ -197,6 +27,38 @@
             color: #990000;
             animation: fadeIn 1.5s ease-in-out;
         }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #004d99;
+        }
+
+        .button {
+            background-color: #004d99;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .service {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -206,6 +68,7 @@
 
 <header>
     <div class="container">
+        <img src="https://yapx.ru/album/YnOEB" alt="Логотип Энтериум Банка" style="max-width: 150px;">
         <h1>Энтериум Банк</h1>
         <nav>
             <ul>
@@ -247,6 +110,10 @@
 <footer>
     <div class="container">
         <p>&copy; 2024 Энтериум Банк. Все права защищены.</p>
+        <p>
+            Наш менеджер: <a href="https://t.me/anteriumoff" style="color: white;">@anteriumoff</a><br>
+            Телеграмм канал: <a href="https://t.me/anteriumOfical" style="color: white;">anterioriumOfical</a>
+        </p>
     </div>
 </footer>
 </body>
