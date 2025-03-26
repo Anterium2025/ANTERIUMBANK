@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -7,151 +7,155 @@
     <style>
         /* === Основные стили === */
         body {
-            font-family: Arial, sans-serif; /* Используем простой шрифт */
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Универсальный box-sizing для всех элементов */
-            animation: fadeIn 1s ease-in-out; /* Анимация плавного появления страницы */
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-in-out;
         }
 
-        /* Анимация плавного появления страницы */
         @keyframes fadeIn {
-            from {
-                opacity: 0; /* Начальная прозрачность */
-            }
-            to {
-                opacity: 1; /* Полная видимость */
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* === Шапка сайта === */
         header {
-            background-color: #004d99; /* Синий фон */
-            color: white; /* Белый текст */
-            padding: 20px 0; /* Отступы сверху и снизу */
-            animation: slideDown 1s ease-in-out; /* Анимация плавного появления сверху */
+            background-color: #004d99;
+            color: white;
+            padding: 20px 0;
+            animation: slideDown 1s ease-in-out;
+            display: flex; /* Flexbox для выравнивания элементов */
+            justify-content: space-between; /* Размещаем логотип и кнопку "Войти" по краям */
+            align-items: center; /* Выравниваем элементы по вертикали */
         }
 
-        /* Анимация шапки */
         @keyframes slideDown {
-            from {
-                transform: translateY(-100%); /* Шапка начинает за пределами экрана */
-            }
-            to {
-                transform: translateY(0); /* Шапка возвращается на место */
-            }
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
         }
 
         .container {
-            width: 90%; /* Ширина контейнера */
-            margin: 0 auto; /* Центрируем */
-            max-width: 1200px; /* Максимальная ширина */
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         /* === Заголовки === */
         h1, h2, h3 {
-            margin: 0; /* Убираем отступы */
-            animation: fadeIn 1.5s ease-in-out; /* Плавное появление заголовков */
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         /* === Меню навигации === */
         nav ul {
-            list-style: none; /* Убираем маркеры списка */
+            list-style: none;
             padding: 0;
             margin: 0;
-            display: flex; /* Горизонтальное расположение */
-            gap: 20px; /* Промежутки между элементами */
+            display: flex;
+            gap: 20px;
         }
 
         nav ul li a {
-            color: white; /* Белый текст */
-            text-decoration: none; /* Убираем подчеркивание */
-            font-size: 18px; /* Размер текста */
-            transition: color 0.3s ease; /* Плавный переход цвета */
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: #ffcc00; /* Золотой цвет при наведении */
-        }        /* === Герой-секция (главный блок) === */        #hero {
-            background-color: #e6f2ff; /* Светло-голубой фон */
-            padding: 40px 0; /* Отступы сверху и снизу */
-            text-align: center; /* Центрируем текст */
-            animation: fadeIn 2s ease-in-out; /* Плавное появление секции */
+            color: #ffcc00;
+        }
+
+        /* === Герой-секция (главный блок) === */
+        #hero {
+            background-color: #e6f2ff;
+            padding: 40px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
 
         #hero h2 {
-            font-size: 36px; /* Крупный заголовок */
-            margin-bottom: 20px; /* Отступ снизу */
+            font-size: 36px;
+            margin-bottom: 20px;
         }
 
         #hero p {
-            font-size: 18px; /* Размер текста */
-            margin-bottom: 20px; /* Отступ снизу */
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
         .button {
-            display: inline-block; /* Блоковая кнопка */
-            padding: 15px 30px; /* Отступы внутри кнопки */
-            font-size: 18px; /* Размер текста */
-            color: white; /* Белый текст */
-            background-color: #004d99; /* Синий фон */
-            border: none; /* Убираем границу */
-            border-radius: 5px; /* Закругленные углы */
-            cursor: pointer; /* Указатель при наведении */
-            text-decoration: none; /* Убираем подчеркивание */
-            transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход при наведении */
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #004d99;
+            border: none;            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .button:hover {
-            background-color: #003366; /* Темно-синий цвет */
-            transform: scale(1.1); /* Увеличение кнопки */
-        }/* === Секция "Услуги" === */
+            background-color: #003366;
+            transform: scale(1.1);
+        }
+
+        /* === Секция "Услуги" === */
         #services {
-            padding: 40px 0; /* Отступы сверху и снизу */
-            text-align: center; /* Центрируем текст */
-            animation: fadeIn 2s ease-in-out; /* Плавное появление */
-        }#services h2 {
-            font-size: 32px; /* Размер заголовка */
-            margin-bottom: 20px; /* Отступ снизу */
+            padding: 40px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #services h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
         }
 
         .service {
-            margin: 20px 0; /* Отступы между услугами */
+            margin: 20px 0;
         }
 
         /* === Кнопки в секции услуг === */
         button {
-            padding: 15px 30px; /* Отступы внутри кнопки */
-            font-size: 18px; /* Размер текста */
-            color: white; /* Белый текст */
-            background-color: #004d99; /* Синий фон */
-            border: none; /* Убираем границу */
-            border-radius: 5px; /* Закругленные углы */
-            cursor: pointer; /* Указатель при наведении */            margin: 10px; /* Отступы между кнопками */            transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход при наведении */
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #004d99;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #003366; /* Темно-синий цвет */
-            transform: scale(1.1); /* Увеличение кнопки */
+            background-color: #003366;
+            transform: scale(1.1);
         }
 
         /* === Подвал === */
         footer {
-            background-color: #004d99; /* Синий фон */
-            color: white; /* Белый текст */
-            text-align: center; /* Центрируем текст */
-            padding: 20px 0; /* Отступы сверху и снизу */
-            animation: fadeIn 1.5s ease-in-out; /* Плавное появление */
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         /* === Дисклеймер === */
         #disclaimer {
-            background-color: #ffcccc; /* Красный фон */
-            padding: 10px; /* Отступы внутри */
-            text-align: center; /* Центрируем текст */
-            font-size: 16px; /* Размер текста */
-            color: #990000; /* Тёмно-красный текст */
-            animation: fadeIn 1.5s ease-in-out; /* Плавное появление */
+            background-color: #ffcccc;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: #990000;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         /* === Контактная информация === */
@@ -161,17 +165,84 @@
         }
 
         #contact-info a {
-            color: #004d99; /* Синий цвет для ссылок */
-            text-decoration: none; /* Убираем подчеркивание */
-            font-weight: bold; /* Жирный шрифт */
+            color: #004d99;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         #contact-info a:hover {
-            text-decoration: underline; /* Подчеркивание при наведении */
+            text-decoration: underline;
         }
+
+        /* === Стили для модального окна === */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Стили для кнопки "Войти" в шапке */
+        .login-button {
+            background-color: #4CAF50; /* Зеленый цвет */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #3e8e41; /* Более темный зеленый цвет */
+        }
+
+        /* Стили для сообщения об успешном входе */
+        #login-message {
+            background-color: #d4edda; /* Светло-зеленый */
+            color: #155724; /* Темно-зеленый */
+            border: 1px solid #c3e6cb;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: none; /* Скрываем сообщение по умолчанию */
+        }
+
     </style>
 </head>
 <body>
+
 <div id="disclaimer">
     Внимание! Это вымышленный сайт банка, созданный в развлекательных целях. Мы не являемся настоящим финансовым учреждением. Ваши средства здесь не хранятся!
 </div>
@@ -186,8 +257,13 @@
                 <li><a href="#">О нас</a></li>
             </ul>
         </nav>
+        <button class="login-button" id="loginBtn">Войти</button>
     </div>
 </header>
+
+<div id="login-message">
+    Вы вошли в аккаунт!
+</div>
 
 <section id="hero">
     <div class="container">
@@ -228,5 +304,64 @@
     <p>Наш менеджер-зам детектора: <a href="https://t.me/anteriumoff">@anteriumoff</a></p>
     <p>Ссылка на телеграмм канал: <a href="https://t.me/anteriumOfical">https://t.me/anteriumOfical</a></p>
 </div>
+
+<!-- Модальное окно -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Войти в аккаунт</h2>
+        <form id="loginForm">
+            <label for="firstName">Имя:</label><br>
+            <input type="text" id="firstName" name="firstName"><br><br>
+            <label for="lastName">Фамилия:</label><br>
+            <input type="text" id="lastName" name="lastName"><br><br>
+            <label for="password">Пароль:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit" class="button">Войти</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Получаем элементы
+    var modal = document.getElementById("loginModal");
+    var btn = document.getElementById("loginBtn");
+    var span = document.getElementsByClassName("close")[0];
+    var form = document.getElementById("loginForm");
+    var loginMessage = document.getElementById("login-message");
+
+    // Когда пользователь кликает на кнопку, открываем модальное окно
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // Когда пользователь кликает на <span> (x), закрываем модальное окно
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Когда пользователь кликает в любое место за пределами модального окна, закрываем его
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Обработка отправки формы
+    form.onsubmit = function(event) {
+        event.preventDefault(); // Предотвращаем перезагрузку страницы
+
+        // Здесь можно добавить логику для проверки имени, фамилии и пароля
+        // В данном примере просто показываем сообщение об успешном входе
+        modal.style.display = "none"; // Закрываем модальное окно
+        loginMessage.style.display = "block"; // Показываем сообщение
+
+        // Скрываем сообщение через 3 секунды (можно настроить)
+        setTimeout(function() {
+            loginMessage.style.display = "none";
+        }, 3000);
+    }
+</script>
+
 </body>
 </html>
