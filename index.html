@@ -131,11 +131,13 @@
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
+            min-width: 250px; /* Добавлено минимальное значение ширины */
         }
 
         .service h3 {
             font-size: 16px;
             margin-bottom: 5px;
+            min-height: 40px; /* Добавлено минимальное значение высоты */
         }
 
         .service p {
@@ -188,13 +190,13 @@
             font-size: 12px;
         }
 
-        #contact-info a {
-            color: #004d99;
+        #contact-info a {            color: #004d99;
             text-decoration: none;
             font-weight: bold;
         }
 
-        #contact-info a:hover {            text-decoration: underline;
+        #contact-info a:hover {
+            text-decoration: underline;
         }
 
         /* === Стили для модального окна === */
@@ -254,7 +256,8 @@
         }
 
         /* Стили для сообщения об успешном входе */
-        #login-message {background-color: #d4edda;
+        #login-message {
+            background-color: #d4edda;
             color: #155724;
             border: 1px solid #c3e6cb;
             padding: 6px;
