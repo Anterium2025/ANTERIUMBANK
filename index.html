@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
             padding: 0;
             box-sizing: border-box;
             animation: fadeIn 1s ease-in-out;
+            line-height: 1.6;
         }
 
         @keyframes fadeIn {
@@ -23,11 +24,8 @@
         header {
             background-color: #004d99;
             color: white;
-            padding: 20px 0;
+            padding: 10px 0; /* Уменьшено верхнее и нижнее поле */
             animation: slideDown 1s ease-in-out;
-            display: flex; /* Flexbox для выравнивания элементов */
-            justify-content: space-between; /* Размещаем логотип и кнопку "Войти" по краям */
-            align-items: center; /* Выравниваем элементы по вертикали */
         }
 
         @keyframes slideDown {
@@ -62,7 +60,7 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 14px; /* Уменьшен размер шрифта */
             transition: color 0.3s ease;
         }
 
@@ -73,28 +71,28 @@
         /* === Герой-секция (главный блок) === */
         #hero {
             background-color: #e6f2ff;
-            padding: 40px 0;
+            padding: 20px 0; /* Уменьшено верхнее и нижнее поле */
             text-align: center;
             animation: fadeIn 2s ease-in-out;
         }
 
         #hero h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 24px; /* Уменьшен размер шрифта */
+            margin-bottom: 10px;
         }
 
         #hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 14px; /* Уменьшен размер шрифта */
+            margin-bottom: 10px;
         }
 
         .button {
             display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 8px 16px; /* Уменьшены поля кнопки */
+            font-size: 14px; /* Уменьшен размер шрифта */
             color: white;
-            background-color: #004d99;
-            border: none;            border-radius: 5px;
+            background-color: #004d99;            border: none;
+            border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
             transition: transform 0.3s ease, background-color 0.3s ease;
@@ -102,58 +100,87 @@
 
         .button:hover {
             background-color: #003366;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         /* === Секция "Услуги" === */
         #services {
-            padding: 40px 0;
+            padding: 20px 0; /* Уменьшено верхнее и нижнее поле */
             text-align: center;
             animation: fadeIn 2s ease-in-out;
         }
 
         #services h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
+            font-size: 20px; /* Уменьшен размер шрифта */
+            margin-bottom: 10px;
+        }
+
+        #services .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: stretch; /* Растягиваем блоки по высоте */
         }
 
         .service {
-            margin: 20px 0;
+            width: 30%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            display: flex; /* Используем flexbox для выравнивания контента */
+            flex-direction: column;
+        }
+
+        .service h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .service p {
+            font-size: 12px;
+            margin-bottom: 10px;
+            flex-grow: 1; /* Позволяет тексту занимать доступное пространство */
+        }
+
+         .service button {
+            margin-top: auto; /* Прижимаем кнопку к низу */
         }
 
         /* === Кнопки в секции услуг === */
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
+        .service button {  /* Перенесено сюда чтобы кнопка была стилизована правильно */
+            padding: 6px 12px; /* Уменьшены поля кнопки */
+            font-size: 12px; /* Уменьшен размер шрифта */
             color: white;
             background-color: #004d99;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 10px;
+            margin: 5px auto 0; /* Центрируем кнопку горизонтально */
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        button:hover {
+        .service button:hover {
             background-color: #003366;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         /* === Подвал === */
         footer {
             background-color: #004d99;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
+            color: white;            text-align: center;
+            padding: 10px 0; /* Уменьшено верхнее и нижнее поле */
             animation: fadeIn 1.5s ease-in-out;
+            font-size: 12px; /* Уменьшен размер шрифта */
         }
 
         /* === Дисклеймер === */
         #disclaimer {
             background-color: #ffcccc;
-            padding: 10px;
+            padding: 6px; /* Уменьшено поле */
             text-align: center;
-            font-size: 16px;
+            font-size: 12px; /* Уменьшен размер шрифта */
             color: #990000;
             animation: fadeIn 1.5s ease-in-out;
         }
@@ -161,7 +188,8 @@
         /* === Контактная информация === */
         #contact-info {
             text-align: center;
-            padding: 20px 0;
+            padding: 10px 0; /* Уменьшено верхнее и нижнее поле */
+            font-size: 12px; /* Уменьшен размер шрифта */
         }
 
         #contact-info a {
@@ -188,17 +216,149 @@
         }
 
         .modal-content {
-            background-color: #fefefe;            margin: 15% auto;
-            padding: 20px;
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 15px; /* Уменьшено поле */
             border: 1px solid #888;
             width: 80%;
-            max-width: 500px;
+            max            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #003366;
+            transform: scale(1.05);
+        }
+
+        /* === Секция "Услуги" === */
+        #services {
+            padding: 20px 0; /* Уменьшено верхнее и нижнее поле */
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #services h2 {
+            font-size: 20px; /* Уменьшен размер шрифта */
+            margin-bottom: 10px;
+        }
+
+        #services .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: stretch; /* Растягиваем блоки по высоте */
+        }
+
+        .service {
+            width: 30%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            display: flex; /* Используем flexbox для выравнивания контента */
+            flex-direction: column;
+        }
+
+        .service h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .service p {
+            font-size: 12px;
+            margin-bottom: 10px;
+            flex-grow: 1; /* Позволяет тексту занимать доступное пространство */
+        }
+
+         .service button {
+            margin-top: auto; /* Прижимаем кнопку к низу */
+        }
+
+        /* === Кнопки в секции услуг === */
+        .service button {  /* Перенесено сюда чтобы кнопка была стилизована правильно */
+            padding: 6px 12px; /* Уменьшены поля кнопки */
+            font-size: 12px; /* Уменьшен размер шрифта */
+            color: white;
+            background-color: #004d99;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px auto 0; /* Центрируем кнопку горизонтально */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .service button:hover {
+            background-color: #003366;
+            transform: scale(1.05);
+        }
+
+        /* === Подвал === */
+        footer {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 10px 0; /* Уменьшено верхнее и нижнее поле */
+            animation: fadeIn 1.5s ease-in-out;
+            font-size: 12px; /* Уменьшен размер шрифта */
+        }
+
+        /* === Дисклеймер === */
+        #disclaimer {
+            background-color: #ffcccc;
+            padding: 6px; /* Уменьшено поле */
+            text-align: center;
+            font-size: 12px; /* Уменьшен размер шрифта */
+            color: #990000;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* === Контактная информация === */
+        #contact-info {
+            text-align: center;
+            padding: 10px 0; /* Уменьшено верхнее и нижнее поле */
+            font-size: 12px; /* Уменьшен размер шрифта */
+        }
+
+        #contact-info a {
+            color: #004d99;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* === Стили для модального окна === */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 15px; /* Уменьшено поле */
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px; /* Уменьшена максимальная ширина */
         }
 
         .close {
             color: #aaa;
             float: right;
-            font-size: 28px;
+            font-size: 18px; /* Уменьшен размер шрифта */
             font-weight: bold;
         }
 
@@ -211,32 +371,53 @@
 
         /* Стили для кнопки "Войти" в шапке */
         .login-button {
-            background-color: #4CAF50; /* Зеленый цвет */
+            background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 10px 20px;
+            padding: 6px 12px; /* Уменьшены поля кнопки */
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 12px; /* Уменьшен размер шрифта */
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+             vertical-align: middle; /* Выравнивание по вертикали */
         }
 
         .login-button:hover {
-            background-color: #3e8e41; /* Более темный зеленый цвет */
+            background-color: #3e8e41;
         }
 
         /* Стили для сообщения об успешном входе */
         #login-message {
-            background-color: #d4edda; /* Светло-зеленый */
-            color: #155724; /* Темно-зеленый */
+            background-color: #d4edda;
+            color: #155724;
             border: 1px solid #c3e6cb;
-            padding: 10px;
-            margin-bottom: 20px;
+            padding: 6px; /* Уменьшено поле */
+            margin-bottom: 10px; /* Уменьшено нижнее поле */
             text-align: center;
-            display: none; /* Скрываем сообщение по умолчанию */
+            display: none;
+            font-size: 12px; /* Уменьшен размер шрифта */
+        }
+
+        /* === Дополнительные стили для выравнивания === */
+        header .container > * {
+            margin: 0;
+             vertical-align: middle; /* Выравнивание по вертикали */
+        }
+
+         header .container h1 {
+            font-size: 20px; /* Размер шрифта логотипа */
+        }
+
+         header .container nav {
+             flex-grow: 1; /* Занимаем всё доступное пространство по центру */
+             text-align: center; /* Выравниваем навигацию по центру */
+         }
+
+        #hero .container > * {
+            margin: 0 auto;
         }
 
     </style>
@@ -301,8 +482,7 @@
 </footer>
 
 <div id="contact-info">
-    <p>Наш менеджер-зам детектора: <a href="https://t.me/anteriumoff">@anteriumoff</a></p>
-    <p>Ссылка на телеграмм канал: <a href="https://t.me/anteriumOfical">https://t.me/anteriumOfical</a></p>
+    <p>Наш менеджер-зам детектора: <a href="https://t.me/anteriumoff">@anteriumoff</a></p><p>Ссылка на телеграмм канал: <a href="https://t.me/anteriumOfical">https://t.me/anteriumOfical</a></p>
 </div>
 
 <!-- Модальное окно -->
